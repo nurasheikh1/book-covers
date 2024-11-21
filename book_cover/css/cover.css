@@ -1,0 +1,223 @@
+@font-face {
+	src:url(../fonts/Newsreader16pt-Light.ttf) format('truetype');
+	font-family: 'Newsreader16pt Light';
+} 
+
+@font-face {
+	src:url(../fonts/Newsreader16pt-Medium.ttf) format('truetype');
+	font-family: 'Newsreader16pt Medium';
+} 
+
+
+
+.title {
+	font-family: 'Newsreader16pt Medium';
+	font-size: 1.8em;
+	color: Black;
+	position: absolute;
+	left: 65%;
+	top: 50%;
+	letter-spacing: 0.3px;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	letter-spacing: 0.1em;
+	line-height: 1.5em;
+}
+
+.container {
+	width: 550px;
+	height: 800px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	background: url("../images/background.png") no-repeat center center;
+	border: solid black 3px;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+	
+}
+
+.text {
+	font-family: 'Newsreader16pt Light';
+	font-size: 1.5em;
+	color: Black;
+	position: absolute;
+	left: 64.5%;
+	top: 57%;
+	letter-spacing: 0.3px;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	line-height: 1.5em;
+}
+
+
+.triangle {
+  position: absolute;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 400px solid black;
+  transform-origin: bottom center;
+  transform: rotate(225deg);
+  top: 20%;
+  left: 40%;
+  animation: move 2s ease-in-out infinite, flashRed 1s ease-in-out infinite;
+}
+
+@keyframes move {
+  0% , 100% {
+    transform: rotate(225deg) translate(0, 0); 
+  }
+  50% {
+    transform: rotate(225deg) translateY(-75px); 
+  }
+}
+
+
+.triangle1 {
+  position: absolute;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 400px solid black;
+  transform-origin: bottom center;
+  top: 10%;
+  left: 50%;
+  transform: translate(30%, -50%) rotate(-30deg);
+  animation: move1 2s ease-in-out infinite, flashRed 1s ease-in-out infinite;
+}
+
+@keyframes move1 {
+    0%, 100% {
+    transform: translate(30%, -50%) rotate(-30deg); 
+  }
+  50% {
+     transform: translate(30%, -50%) rotate(-30deg) scaleY(2.5);
+  }
+}
+
+
+.triangle2 {
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 300px solid black;
+  transform-origin: bottom center;
+  top: 10%;
+  left: 40%;
+  transform: translate(-30%, 15%) rotate(-90deg);
+  animation: move2 2s ease-in-out infinite, flashRed 1s ease-in-out infinite;
+}
+
+@keyframes move2 {
+    0%, 100% {
+    transform: translate(-30%, 15%) rotate(-90deg); 
+  }
+  50% {
+     transform: translate(-30%, 15%) rotate(-90deg) scaleY(2.5);
+  }
+}
+
+
+
+.triangle3 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 300px solid black;
+  transform-origin: bottom center;
+  top: 15%;
+  left: 76%;
+  transform: translate(20%, -70%) rotate(15deg);
+  animation: move3 2s ease-in-out infinite, flashRed 1s ease-in-out infinite;
+}
+
+@keyframes move3 {
+    0%, 100% {
+    transform: translate(20%, -70%) rotate(15deg); 
+  }
+  50% {
+     transform: translate(20%, -70%) rotate(15deg) scaleY(2.5);
+  }
+}
+
+.triangle4 {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 250px solid black;
+  transform-origin: bottom center;
+  transform: rotate(-20deg);
+  bottom: -5%;
+  right: -3%;
+  animation: move4 2s ease-in-out infinite, flashRed 1s ease-in-out infinite;
+}
+
+
+@keyframes move4 {
+  0%, 100% {
+    transform: translate(-5%, -3%) rotate(-20deg);  
+  }
+  50% {
+    transform: translate(-5%, -3%) rotate(-20deg) scaleY(1.5);  
+  }
+  
+  0%, 100% {
+    border-top-color: ; /* Original color */
+  }
+  50% {
+    border-top-color: red; /* Flash red */
+  }
+}
+
+@keyframes flashRed {
+  0%, 100% {
+    border-top-color: red; /* Original color */
+  }
+  50% {
+    border-top-color: darkred; /* Flash red */
+  }
+}
+
+@keyframes flashRed {
+  0%, 100% {
+    border-bottom-color: red; /* Original color */
+  }
+  50% {
+    border-bottom-color: darkred; /* Flash red */
+  }
+}
+
+
+.container:hover .triangle,
+.container:hover .triangle1,
+.container:hover .triangle2,
+.container:hover .triangle3,
+.container:hover .triangle4 {
+  border-top-color: red; 
+  border-bottom-color: red;
+}
+
+.triangle, .triangle1, .triangle2, .triangle3, .triangle4 {
+  transition: border-color 0.3s ease;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
